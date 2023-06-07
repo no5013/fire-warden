@@ -1,30 +1,30 @@
-# Fire Warden
+# Fireward (ระวังฟืนระวังไฟ)
 
 ![Firebase](https://img.shields.io/badge/firebase-%23039BE5.svg?style=flat&logo=firebase)
 ![Serverless](https://img.shields.io/badge/serverless-%23FD5750.svg?style=flat&logo=serverless)
 
-Fire Warden is a Firebase serverless function that periodically runs health checks on a target website. It ensures that the website is up and running, providing valuable insights into its availability and performance.
+Fireward is a Firebase serverless function that periodically runs health checks on a target website. It ensures that the website is up and running, providing valuable insights into its availability and performance.
 
 ## Functionality
 
-The Fire Warden repository contains a serverless function developed using Firebase Functions. This function is responsible for periodically checking the health of a target website by sending HTTP requests and verifying the responses. The checks can be customized according to specific requirements and can include various metrics, such as response time, status codes, and content validation.
+The Fireward repository contains a serverless function developed using Firebase Functions. This function is responsible for periodically checking the health of a target website by sending HTTP requests and verifying the responses. The checks can be customized according to specific requirements and can include various metrics, such as response time, status codes, and content validation.
 
 The function runs at predefined intervals and can be configured to send notifications or trigger alerts when issues are detected. These alerts can be sent to various channels, such as email, SMS, or a messaging service.
 
 ## Setup and Configuration
 
-To use the Fire Warden serverless function, follow these steps:
+To use the Fireward serverless function, follow these steps:
 
 1. Clone the repository to your local machine:
 
    ```bash
-   git clone https://github.com/your-username/fire-warden.git
+   git clone https://github.com/your-username/fireward.git
    ```
 
 2. Install the required dependencies by navigating to the project directory and running:
 
    ```bash
-   cd fire-warden
+   cd fireward
    npm install
    ```
 
@@ -64,7 +64,7 @@ To use the Fire Warden serverless function, follow these steps:
 
 ## Customization and Advanced Configuration
 
-The Fire Warden serverless function can be customized to meet your specific requirements. Here are a few customization options:
+The Fireward serverless function can be customized to meet your specific requirements. Here are a few customization options:
 
 - **Health Check Metrics**: Modify the function code in `index.js` to include additional health check metrics or modify the existing ones. You can track response times, verify specific response content, or even integrate with external monitoring services.
 
@@ -72,13 +72,13 @@ The Fire Warden serverless function can be customized to meet your specific requ
 
 - **Advanced Scheduling**: Firebase Functions use the [Firebase Cloud Scheduler](https://firebase.google.com/docs/functions/schedule-functions) to trigger the function at predefined intervals. You can explore the scheduling documentation to customize the frequency and timing of the health checks.
 
-- **Integration with Monitoring Systems**: Extend the functionality of Fire Warden by integrating it with monitoring and incident management systems. For example, you can trigger automated incident tickets
+- **Integration with Monitoring Systems**: Extend the functionality of Fireward by integrating it with monitoring and incident management systems. For example, you can trigger automated incident tickets or update monitoring dashboards when issues are detected.
 
- or update monitoring dashboards when issues are detected.
+
 
 ## Contributing
 
-Contributions to the Fire Warden repository are welcome! If you encounter any bugs, have suggestions for improvements, or would like to add new features, please open an issue or submit a pull request. Make sure to follow the project's coding standards and include appropriate tests for your changes.
+Contributions to the Fireward repository are welcome! If you encounter any bugs, have suggestions for improvements, or would like to add new features, please open an issue or submit a pull request. Make sure to follow the project's coding standards and include appropriate tests for your changes.
 
 ## License
 
@@ -86,4 +86,4 @@ This project is licensed under the [MIT License](LICENSE). Feel free to use, mod
 
 ## Acknowledgements
 
-The Fire Warden project was inspired by the need for a simple and lightweight website health monitoring solution. It utilizes the power of Firebase Functions and serverless architecture to provide an easily deployable and customizable solution.
+The Fireward project was inspired by the need for a simple and lightweight website health monitoring solution. It utilizes the power of Firebase Functions and serverless architecture to provide an easily deployable and customizable solution.
