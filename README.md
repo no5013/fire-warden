@@ -1,1 +1,66 @@
-# fire-warden
+Fire Warden
+Firebase
+Serverless
+
+Fire Warden is a Firebase serverless function that periodically runs health checks on a target website. It ensures that the website is up and running, providing valuable insights into its availability and performance.
+
+Functionality
+The Fire Warden repository contains a serverless function developed using Firebase Functions. This function is responsible for periodically checking the health of a target website by sending HTTP requests and verifying the responses. The checks can be customized according to specific requirements and can include various metrics, such as response time, status codes, and content validation.
+
+The function runs at predefined intervals and can be configured to send notifications or trigger alerts when issues are detected. These alerts can be sent to various channels, such as email, SMS, or a messaging service.
+
+Setup and Configuration
+To use the Fire Warden serverless function, follow these steps:
+
+Clone the repository to your local machine:
+
+bash
+Copy code
+git clone https://github.com/your-username/fire-warden.git
+Install the required dependencies by navigating to the project directory and running:
+
+bash
+Copy code
+cd fire-warden
+npm install
+Set up a Firebase project and configure it locally by running:
+
+bash
+Copy code
+firebase login
+firebase use --add
+Follow the interactive prompts to log in to your Firebase account and select or create a project.
+
+Configure the target website and health checks by modifying the config.js file:
+
+javascript
+Copy code
+module.exports = {
+  targetWebsite: 'https://example.com', // Specify the target website URL
+  interval: 'every 5 minutes', // Set the interval for health checks (e.g., every 5 minutes)
+  notifications: {
+    email: 'your-email@example.com', // Configure the email address for notifications
+    sms: '+1234567890', // (Optional) Configure the phone number for SMS notifications
+    // Add more notification channels as needed (e.g., Slack, Discord, etc.)
+  },
+  // Configure other health check options, such as response time thresholds, status codes, etc.
+};
+Deploy the serverless function to Firebase by running:
+
+bash
+Copy code
+firebase deploy --only functions
+This command will deploy the function to your Firebase project, making it operational.
+
+Monitor the health checks and receive notifications as configured in the config.js file.
+
+Customization and Advanced Configuration
+The Fire Warden serverless function can be customized to meet your specific requirements. Here are a few customization options:
+
+Health Check Metrics: Modify the function code in index.js to include additional health check metrics or modify the existing ones. You can track response times, verify specific response content, or even integrate with external monitoring services.
+
+Notification Channels: Expand the notifications object in the config.js file to include additional channels for notifications. You can configure alerts to be sent via various services such as Slack, Discord, or custom webhooks.
+
+Advanced Scheduling: Firebase Functions use the Firebase Cloud Scheduler to trigger the function at predefined intervals. You can explore the scheduling documentation to customize the frequency and timing of the health checks.
+
+Integration with Monitoring Systems: Extend the functionality of Fire Warden by integrating it with monitoring and incident management systems. For example, you can trigger automated incident tickets
